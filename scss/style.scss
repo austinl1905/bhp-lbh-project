@@ -1,0 +1,362 @@
+@use 'sass:map' as map;
+@use 'sass:color' as color;
+@import 'fonts';
+@import 'colors';
+
+* {
+    font-family: $font-3;
+}
+
+$alignments: (
+    "center": center,
+    "spaceeven": space-evenly,
+    "default": stretch,
+    "left": left
+);
+
+$heights: ("footer": 250px);
+$widths: ("full": 100%, "xllarge": 90%, "xlarge": 80%);
+$box: (
+    "margins": (
+        "med": 100px,
+        "responsive-1": 0.5em,
+        "responsive-2": 0.75em,
+        "responsive-3": 1em,
+        "responsive-4": 1.25em
+    ),
+
+    "borders": (
+        "radius": 5px
+    ),
+
+    "gaps": (
+        "col": 35px,
+        "row": 50px
+    ),
+
+    "paddings": (
+        "small": 20px
+    )
+);
+
+$center: 0 auto 0 auto;
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    grid-row: 1/2;
+    height: 100vh;
+    width: map.get($widths, "full");
+    display: flex;
+    align-items: map.get($alignments, "center");
+    justify-content: map.get($alignments, "spaceeven");
+    @include gradient;
+
+    @media screen and (max-width: 1164px) {
+        display: grid;
+        justify-content: map.get($alignments, "default");
+        justify-items: map.get($alignments, "center");
+    }
+}
+
+.heading-1 {
+    font-family: $font-1;
+    // font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: $font-size-large;
+    margin: $center;
+    text-align: map.get($alignments, "center");
+    animation: fadein 2s;
+    max-width: map.get($widths, "xxlarge");
+
+    @media screen and (max-width: 414px) {
+        font-size: 12vw;
+    }
+}
+
+.heading-2 {
+    @extend .heading-1;
+    font-family: $font-2;
+    font-size: $font-size-medium;
+    animation: fadein 4s;
+
+    @media screen and (max-width: 414px) {
+        font-size: 6vw;
+    }
+}
+
+nav {
+    grid-row: 2/3;
+}
+
+.paragraph-text {
+    @extend .heading-1;
+    font-family: $font-3;
+    font-size: 1.1rem;
+    animation: none;
+    margin: 0;
+    text-align: map.get($alignments, "left");
+    color: black;
+    line-height: 1.75;
+}
+
+.footer-text {
+    @extend .paragraph-text;
+    color: white;
+    margin: $center;
+    text-align: map.get($alignments, "center");
+}
+
+.anchor-text {
+    @extend .footer-text;
+    text-decoration: none;
+}
+
+.context {
+    text-align: map.get($alignments, "center") !important;
+    margin-top: map.get($box, "margins", "med");
+    margin-left: auto;
+    margin-right: auto;
+    width: map.get($widths, "xllarge");
+
+    h2 {
+        @extend .part-a-heading;
+        margin-bottom: map.get($box, "margins", "responsive-4");
+    }
+}
+
+.content-1 {
+    grid-row: 3/4;
+    // background-color: map.get($background-colors, "Blue", "Light");
+    background-color: white;
+}
+
+.content-2 {
+    grid-row: 4/5;
+    // background-color: color.adjust(map.get($background-colors, "Blue", "Light"), $lightness: -50%);
+    background-color: map.get($background-colors, "Blue", "Light");
+    // background-color: white;
+    // & > .paragraph-text {
+    //     color: white;
+    // }
+}
+
+.part-a {
+    max-width: map.get($widths, "xllarge");
+    margin: map.get($box, "margins", "med") auto map.get($box, "margins", "med") auto;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+
+    @media screen and (max-width: 1366px) {
+        grid-template-columns: auto;
+        grid-template-rows: auto, 1fr;
+        row-gap: map.get($box, "gaps", "row");
+    }
+}
+
+.timeline-container {
+    grid-column: 1/2;
+
+    @media screen and (max-width: 800px) {
+        grid-row: 2/3;
+    }
+}
+
+.part-a-heading {
+    @extend .heading-1;
+    color: map.get($background-colors, "Black", "Dark");
+    font-size: 2.5rem;
+    animation: none;
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+    @media screen and (max-width: 1366px) {
+        grid-column: 1/2;
+    }
+}
+
+.part-b-heading {
+    @extend .part-a-heading;
+    margin-bottom: map.get($box, "margins", "med");
+    color: map.get($background-colors, "Black", "medium");
+}
+
+.part-b-container {
+    width: map.get($widths, "xllarge");
+    background-color: white;
+    border-radius: map.get($box, "borders", "radius");
+    padding: map.get($box, "paddings", "small");
+    margin: $center;
+
+    @media screen and (max-width: 640px) {
+        width: 100%;
+    }
+}
+
+.part-b-inner {
+    @extend .part-b-container;
+    background-color: snow;
+    box-shadow: $box-shadow-1;
+    width: map.get($widths, "full");
+
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: map.get($box, "margins", "responsive-2");
+        font-family: $font-1;
+        color: map.get($background-colors, "Black", "Dark");
+    }
+
+    h5 {
+        margin-top: map.get($box, "margins", "responsive-1");
+    }
+
+    li {
+        margin-top: map.get($box, "margins", "responsive-1");
+    }
+}
+
+.timeline-heading {
+    font-family: $font-1;
+    @include timeline-header-style;
+    text-align: map.get($alignments, "left");
+}
+
+.timeline-item {
+	padding: 3em 2em 2em;
+	position: relative;
+	color: map.get($background-colors, "Black", "Dark");
+	border-left: 2px solid $border-1;
+
+    ul {
+        list-style-type: circle;
+
+        & > li {
+            margin-top: map.get($box, "margins", "responsive-1");
+        }
+    }
+
+	&::before {
+		content: attr(field);
+		position: absolute;
+		left: 2em;
+		font-weight: bold;
+		top: map.get($box, "margins", "responsive-3");
+		display: block;
+		font-family: $font-4;
+		font-weight: 700;
+		font-size: 1rem;
+	}
+
+	&::after {
+		width: 10px;
+		height: 10px;
+		display: block;
+		position: absolute;
+        top: map.get($box, "margins", "responsive-3");
+		left: -7px;
+		border-radius: 10px;
+		content: '';
+		border: 2px solid $border-1;
+		background: white;
+	}
+
+	&:last-child {
+		border-image: $nth-child-gradient;
+	}
+}
+
+.content-image {
+    border: $border-2;
+    margin: 0 map.get($box, "margins", "responsive-3") map.get($box, "margins", "responsive-3") map.get($box, "margins", "responsive-3");
+    width: 35vw;
+    height: auto;
+    float: right;
+
+    @media screen and (max-width: 800px) {
+        max-width: 35vw;
+    }
+}
+
+.part-b {
+    max-width: map.get($widths, "xllarge");
+    margin: map.get($box, "margins", "med") auto map.get($box, "margins", "med") auto;
+}
+
+.part-b-list {
+    direction: ltr;
+    margin-top: 1em;
+    list-style-type: square;
+}
+
+.icon {
+    width: 45px;
+    height: auto;
+    border-radius: 5px;
+    margin: $center;
+}
+
+.btn {
+    margin-top: map.get($box, "margins", "responsive-1");
+}
+
+.footer {
+    @extend .header;
+    grid-row: 5/6;
+    height: map.get($heights, "footer");
+    background-image: none;
+    margin-bottom: 0;
+    background-color: color.adjust(map.get($background-colors, "Blue", "Dark"), $lightness: 20%);
+}
+
+@mixin hvr-fade {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+
+    &:hover, &:focus, &:active {
+        background-color: white;
+
+        .anchor-text {
+            color: black;
+        }
+    }
+}
+
+.button {
+    @include hvr-fade;
+    margin: $center;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: map.get($box, "borders", "radius");
+    padding: map.get($box, "borders", "radius");
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1.5s all ease;
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
