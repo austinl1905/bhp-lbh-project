@@ -270,7 +270,7 @@ nav {
   background-color: #6899b7;
 }
 
-.button {
+.button, .form-submit-button {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -287,11 +287,16 @@ nav {
   border-radius: 5px;
   padding: 5px;
 }
-.button:hover, .button:focus, .button:active {
+.button:hover, .form-submit-button:hover, .button:focus, .form-submit-button:focus, .button:active, .form-submit-button:active {
   background-color: white;
 }
-.button:hover .anchor-text, .button:focus .anchor-text, .button:active .anchor-text {
+.button:hover .anchor-text, .form-submit-button:hover .anchor-text, .button:focus .anchor-text, .form-submit-button:focus .anchor-text, .button:active .anchor-text, .form-submit-button:active .anchor-text {
   color: black;
+}
+
+.form-submit-button {
+  border: 1px solid black;
+  margin-top: 0.5em;
 }
 
 .reveal {

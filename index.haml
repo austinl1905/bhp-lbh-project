@@ -8,7 +8,6 @@
         -# %style *{border-style: dashed;}
         %title Big History Project
         %link{:href => "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css", :rel => "stylesheet", :integrity => "sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ", :crossorigin => "anonymous"}
-        %link{:rel => "stylesheet", :href => "https://unpkg.com/survey-jquery@1.9.90/defaultV2.min.css"}
     %body
         .header#0
             %h1.heading-1 Maritime Trade
@@ -22,9 +21,9 @@
                         %li.nav-item
                             %a.active.nav-link.anchor-text{:aria => "page", :href => "#0"}Top
                         %li.nav-item
-                            %a.nav-link.anchor-text{:href => "#1"}Pros
+                            %a.nav-link.anchor-text{:href => "#1"}Pros & Cons
                         %li.nav-item
-                            %a.nav-link.anchor-text{:href => "#2"}Cons
+                            %a.nav-link.anchor-text{:href => "#2"}Quiz
         .content-1#1
             .context
                 %h2 What is a container ship?
@@ -65,7 +64,7 @@
                 .part-b-container
                     .part-b-inner
                         %h2 Take this quiz to see how much you know about maritime travel!
-                        %form
+                        #quiz-container
                             %p.paragraph-text What was an effect of the invention of the container ship?
                             .form-check
                                 %input.form-check-input{:type => "radio", :name => "radio-1", :id => "radio-1-1"}
@@ -92,7 +91,7 @@
                             .form-check
                                 %input.form-check-input{:type => "radio", :name => "radio-2", :id => "radio-2-4"}
                                 %label.form-check-label{:for => "radio-2-4"} 1900 CE
-                            %p.paragraph-text The Age of Discovery marked when what events took place?
+                            %p.paragraph-text The Age of Discovery marked when which event took place?
                             .form-check
                                 %input.form-check-input{:type => "radio", :name => "radio-3", :id => "radio-3-1"}
                                 %label.form-check-label{:for => "radio-3-1"} Austronesian expansion
@@ -118,7 +117,7 @@
                             .form-check
                                 %input.form-check-input{:type => "radio", :name => "radio-4", :id => "radio-4-4"}
                                 %label.form-check-label{:for => "radio-4-4"} All of the Above
-                            %button.btn.btn-secondary{:type => "submit"} Submit
+                            %button.form-submit-button#submit Submit
 
         .footer
             %p.footer-text Made by Austin Liu
@@ -127,6 +126,3 @@
                 %a.anchor-text{:href => "#0"}To Top
         %script{:src => "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js", :integrity => "sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe", :crossorigin => "anonymous"}
         %script{:src => "script.js"}
-        %script{:src => "json.js"}
-        %script{:src => "https://unpkg.com/jquery/dist/jquery.min.js"}
-        %script{:src => "https://unpkg.com/survey-jquery@1.9.90/survey.jquery.min.js"}

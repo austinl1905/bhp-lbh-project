@@ -349,6 +349,20 @@ nav {
     padding: map.get($box, "borders", "radius");
 }
 
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.form-submit-button {
+    @extend .button;
+    border: 1px solid black;
+    margin-top: map.get($box, "margins", "responsive-1");
+}
+
 .reveal {
     position: relative;
     transform: translateY(100px);

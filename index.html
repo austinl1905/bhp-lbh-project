@@ -7,7 +7,6 @@
 <link href='imgs/ca_10.png' rel='icon' type='image/x-icon'>
 <title>Big History Project</title>
 <link crossorigin='anonymous' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css' integrity='sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ' rel='stylesheet'>
-<link href='https://unpkg.com/survey-jquery@1.9.90/defaultV2.min.css' rel='stylesheet'>
 </head>
 <body>
 <div class='header' id='0'>
@@ -25,10 +24,10 @@
 <a aria='page' class='active nav-link anchor-text' href='#0'>Top</a>
 </li>
 <li class='nav-item'>
-<a class='nav-link anchor-text' href='#1'>Pros</a>
+<a class='nav-link anchor-text' href='#1'>Pros & Cons</a>
 </li>
 <li class='nav-item'>
-<a class='nav-link anchor-text' href='#2'>Cons</a>
+<a class='nav-link anchor-text' href='#2'>Quiz</a>
 </li>
 </ul>
 </div>
@@ -90,7 +89,7 @@
 <div class='part-b-container'>
 <div class='part-b-inner'>
 <h2>Take this quiz to see how much you know about maritime travel!</h2>
-<form>
+<div id='quiz-container'>
 <p class='paragraph-text'>What was an effect of the invention of the container ship?</p>
 <div class='form-check'>
 <input class='form-check-input' id='radio-1-1' name='radio-1' type='radio'>
@@ -125,7 +124,7 @@
 <input class='form-check-input' id='radio-2-4' name='radio-2' type='radio'>
 <label class='form-check-label' for='radio-2-4'>1900 CE</label>
 </div>
-<p class='paragraph-text'>The Age of Discovery marked when what events took place?</p>
+<p class='paragraph-text'>The Age of Discovery marked when which event took place?</p>
 <div class='form-check'>
 <input class='form-check-input' id='radio-3-1' name='radio-3' type='radio'>
 <label class='form-check-label' for='radio-3-1'>Austronesian expansion</label>
@@ -136,7 +135,7 @@
 </div>
 <div class='form-check'>
 <input class='form-check-input' id='radio-3-3' name='radio-3' type='radio'>
-<label class='form-check-label' for='radio-3-3'>Decolonization of West Africa</label>
+<label class='form-check-label' for='radio-3-3'>Viking exploration of North America</label>
 </div>
 <div class='form-check'>
 <input class='form-check-input' id='radio-3-4' name='radio-3' type='radio'>
@@ -153,10 +152,14 @@
 </div>
 <div class='form-check'>
 <input class='form-check-input' id='radio-4-3' name='radio-4' type='radio'>
-<label class='form-check-label' id='radio-4-4' name='radio-4' type='radio'></label>
+<label class='form-check-label' for='radio-4-3'>Economic Stagnation</label>
 </div>
-<button class='btn btn-secondary' type='submit'>Submit</button>
-</form>
+<div class='form-check'>
+<input class='form-check-input' id='radio-4-4' name='radio-4' type='radio'>
+<label class='form-check-label' for='radio-4-4'>All of the Above</label>
+</div>
+<button class='form-submit-button' id='submit'>Submit</button>
+</div>
 </div>
 </div>
 </div>
@@ -170,8 +173,5 @@
 </div>
 <script crossorigin='anonymous' integrity='sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe' src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js'></script>
 <script src='script.js'></script>
-<script src='json.js'></script>
-<script src='https://unpkg.com/jquery/dist/jquery.min.js'></script>
-<script src='https://unpkg.com/survey-jquery@1.9.90/survey.jquery.min.js'></script>
 </body>
 </html>
