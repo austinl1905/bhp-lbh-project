@@ -16,7 +16,8 @@ window.addEventListener("scroll", reveal);
 
 reveal();
 
-var submitButton = document.getElementById('submit');
+document.addEventListener('DOMContentLoaded', function() {
+    var submitButton = document.getElementById('submit');
 submitButton.addEventListener('click', checkAnswers);
 
 // Function to check the selected answers
@@ -54,3 +55,5 @@ function markOption(options, correctOption) {
     }
   }
 }
+  });
+
