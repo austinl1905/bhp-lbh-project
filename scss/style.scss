@@ -349,12 +349,11 @@ nav {
     padding: map.get($box, "borders", "radius");
 }
 
-.correct {
-    color: green;
-}
-
-.incorrect {
-    color: red;
+.form {
+    margin: $center;
+    width: 640px;
+    max-width: 70vw;
+    height: 833px;
 }
 
 .form-submit-button {

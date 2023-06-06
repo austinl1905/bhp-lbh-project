@@ -60,64 +60,67 @@
                                 %p.paragraph-text The semi-automation of unloading and loading cargo has taken away jobs in the maritime and shipping industry.
         .content-2#2
             .part-b#part-b
-                .part-b-heading Quiz
+                .part-b-heading Survey
                 .part-b-container
                     .part-b-inner
-                        %h2 Take this quiz to see how much you know about maritime travel!
-                        #quiz-container
-                            %p.paragraph-text What was an effect of the invention of the container ship?
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-1", :id => "radio-1-1"}
-                                %label.form-check-label{:for => "radio-1-1"} Globalization
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-1", :id => "radio-1-2"}
-                                %label.form-check-label{:for => "radio-1-2"} Famine
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-1", :id => "radio-1-3"}
-                                %label.form-check-label{:for => "radio-1-3"} Imperialism
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-1", :id => "radio-1-4"}
-                                %label.form-check-label{:for => "radio-1-4"} All of the above
-                            %p.paragraph-text In what century was the steamboat invented?
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-2", :id => "radio-2-1"}
-                                %label.form-check-label{:for => "radio-2-1"} Before 1600 CE
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-2", :id => "radio-2-2"}
-                                %label.form-check-label{:for => "radio-2-2"} 1700 CE
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-2", :id => "radio-2-3"}
-                                %label.form-check-label{:for => "radio-2-3"} 1800 CE
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-2", :id => "radio-2-4"}
-                                %label.form-check-label{:for => "radio-2-4"} 1900 CE
-                            %p.paragraph-text The Age of Discovery marked when which event took place?
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-3", :id => "radio-3-1"}
-                                %label.form-check-label{:for => "radio-3-1"} Austronesian expansion
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-3", :id => "radio-3-2"}
-                                %label.form-check-label{:for => "radio-3-2"} Portuguese maritime expeditions
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-3", :id => "radio-3-3"}
-                                %label.form-check-label{:for => "radio-3-3"} Viking exploration of North America
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-3", :id => "radio-3-4"}
-                                %label.form-check-label{:for => "radio-3-4"} Crusades
-                            %p.paragraph-text What is a direct negative effect of the container ship?
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-4", :id => "radio-4-1"}
-                                %label.form-check-label{:for => "radio-4-1"} Pollution
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-4", :id => "radio-4-2"}
-                                %label.form-check-label{:for => "radio-4-2"} Overpopulation
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-4", :id => "radio-4-3"}
-                                %label.form-check-label{:for => "radio-4-3"} Economic Stagnation
-                            .form-check
-                                %input.form-check-input{:type => "radio", :name => "radio-4", :id => "radio-4-4"}
-                                %label.form-check-label{:for => "radio-4-4"} All of the Above
-                            %button.form-submit-button#submit Submit
+                        %p.paragraph-text Take this survey to tell us whether you still think container ships should still be used or not!
+                        -# <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd4-BLtARHgY2g7wWQPu5toG6VM7Rz8PHvJWu94VYNxMY7wPQ/viewform?embedded=true" width="640" height="833" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        %iframe.form{:src => "https://docs.google.com/forms/d/e/1FAIpQLSd4-BLtARHgY2g7wWQPu5toG6VM7Rz8PHvJWu94VYNxMY7wPQ/viewform?embedded=true", :frameborder => "0", :marginheight => "0"} Loading...
+                        %p.paragraph-text If the image is difficult to see, open the form in a <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4-BLtARHgY2g7wWQPu5toG6VM7Rz8PHvJWu94VYNxMY7wPQ/viewform?usp=sf_link" target="_blank">new tab</a>.
+                        -# #quiz-container
+                        -#     %p.paragraph-text What was an effect of the invention of the container ship?
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-1", :id => "radio-1-1"}
+                        -#         %label.form-check-label{:for => "radio-1-1"} Globalization
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-1", :id => "radio-1-2"}
+                        -#         %label.form-check-label{:for => "radio-1-2"} Famine
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-1", :id => "radio-1-3"}
+                        -#         %label.form-check-label{:for => "radio-1-3"} Imperialism
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-1", :id => "radio-1-4"}
+                        -#         %label.form-check-label{:for => "radio-1-4"} All of the above
+                        -#     %p.paragraph-text In what century was the steamboat invented?
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-2", :id => "radio-2-1"}
+                        -#         %label.form-check-label{:for => "radio-2-1"} Before 1600 CE
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-2", :id => "radio-2-2"}
+                        -#         %label.form-check-label{:for => "radio-2-2"} 1700 CE
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-2", :id => "radio-2-3"}
+                        -#         %label.form-check-label{:for => "radio-2-3"} 1800 CE
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-2", :id => "radio-2-4"}
+                        -#         %label.form-check-label{:for => "radio-2-4"} 1900 CE
+                        -#     %p.paragraph-text The Age of Discovery marked when which event took place?
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-3", :id => "radio-3-1"}
+                        -#         %label.form-check-label{:for => "radio-3-1"} Austronesian expansion
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-3", :id => "radio-3-2"}
+                        -#         %label.form-check-label{:for => "radio-3-2"} Portuguese maritime expeditions
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-3", :id => "radio-3-3"}
+                        -#         %label.form-check-label{:for => "radio-3-3"} Viking exploration of North America
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-3", :id => "radio-3-4"}
+                        -#         %label.form-check-label{:for => "radio-3-4"} Crusades
+                        -#     %p.paragraph-text What is a direct negative effect of the container ship?
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-4", :id => "radio-4-1"}
+                        -#         %label.form-check-label{:for => "radio-4-1"} Pollution
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-4", :id => "radio-4-2"}
+                        -#         %label.form-check-label{:for => "radio-4-2"} Overpopulation
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-4", :id => "radio-4-3"}
+                        -#         %label.form-check-label{:for => "radio-4-3"} Economic Stagnation
+                        -#     .form-check
+                        -#         %input.form-check-input{:type => "radio", :name => "radio-4", :id => "radio-4-4"}
+                        -#         %label.form-check-label{:for => "radio-4-4"} All of the Above
+                        -#     %button.form-submit-button#submit Submit
 
         .footer
             %p.footer-text Made by Austin Liu
